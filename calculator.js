@@ -56,18 +56,24 @@ operators.forEach((operator => {
 //If there is a decimal, it fixes the position of the return total to 4.
 function calculate() {
     total = operate(parseInt(newNumber), parseInt(oldNumber), clickedOperand);
-    if(oldNumber === "0") {
+    if(oldNumber === "0" && clickedOperand === "/") {
         total = "Black holes are where God divided by zero.";
+        bottomDisplay.innerText = total;
+        return;
     } else if(total % 1 === 0) {
         bottomDisplay.innerText = total;
-        topDisplay.innertext = newNumber + " " + clickedOperand + " " + oldNumber;
+        topDisplay.innerText = newNumber + " " + clickedOperand + " " + oldNumber;
         oldNumber = total;
-        return
-    } else (total % 1 !== "0") 
+        return;
+    } else if(total % 1 !== 0) {
         total = Number(total).toFixed(4)
         bottomDisplay.innerText = total;
-        topDisplay.innertext = newNumber + " " + clickedOperand + " " + oldNumber;
+        topDisplay.innerText = newNumber + " " + clickedOperand + " " + oldNumber;
         oldNumber = total;
+        return;
+    } else (total === NaN) 
+        total === "0";
+        bottomDisplay.innerText = total;
         return;
 };
 
