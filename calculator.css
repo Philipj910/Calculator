@@ -1,0 +1,53 @@
+body {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: gray;
+}
+
+#iCalc {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: auto 10rem;
+    padding: 2rem;
+    background-color: black;
+    border-radius: 5%;
+    gap: .6rem;
+    border: .2rem solid black;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .6rem;
+    padding: 2rem;
+}
+
+#display { 
+    display: grid;
+    grid-column: span 4;
+    background-color: gray;
+    height: 6rem;
+    border-radius: .6rem;
+}
+
+button {
+    height: 4rem;
+    width: 4rem;
+    border-radius: .7rem;
+}
+
+#top {
+    display: flex;
+    align-self: center;
+    justify-content: end;
+    margin: 0 1rem;
+}
+
+#bottom {
+    display: flex;
+    align-self: center;
+    justify-content: end;
+    margin: 0 1rem;
+}
